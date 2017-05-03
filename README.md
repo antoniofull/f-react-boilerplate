@@ -15,7 +15,7 @@ The only different rule is that this boilerplate allows both .js and .jsx extens
 
 ## How to use it 
 
-###Run
+### Run
     
     npm install 
      
