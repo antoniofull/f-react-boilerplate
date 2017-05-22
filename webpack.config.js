@@ -19,16 +19,6 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new HtmlWebpackPlugin({
-      title: 'My App',
-      template: './src/index.html',
-      filename: 'index.html'
-    }),
-    new ExtractTextPlugin({
-      filename: 'css/app.css',
-      allChunks: true,
-      disable: isDev
-    })
   ],
 
   module: { 
@@ -64,10 +54,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader']
-        })
+        use: ['style-loader', 'css-loader', 'sass-loader'] 
       }
     ]
   },
